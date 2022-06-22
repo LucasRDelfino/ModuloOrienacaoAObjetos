@@ -9,18 +9,11 @@ public class Executavel {
 		Cliente cliente3 = new Cliente("Julio Cesar" ,"Grajau, 1000", 56565656,"julio.cesar@gmail.com");
 		
 	
-		Conta conta1 = new Conta(1,cliente1);
-		Conta conta2 = new Conta(2,cliente2);
-		Conta conta3 = new Conta(2,cliente3);
+		ContaCorrente conta1 = new ContaCorrente(1,cliente1);
 		
-		conta1.depositar(10000);
-		conta2.depositar(5000);
-		conta3.depositar(2000);
+		ContaPoupanca conta2 = new ContaPoupanca(1,cliente2);
 		
-		
-		conta1.exibirSaldo();
-		conta2.exibirSaldo();
-		conta3.exibirSaldo();
+		conta1.Investir(conta2,500);
 		
 	}
 

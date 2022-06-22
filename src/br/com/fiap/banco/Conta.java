@@ -1,15 +1,14 @@
 package br.com.fiap.banco;
 
-public class Conta {
+public abstract class Conta {
 
 	// atributos
-	private long numeroConta;
-	private double saldo;
-	private Cliente cliente;
+	protected long numeroConta;
+	protected double saldo;
+	protected Cliente cliente;
 
 	
 	public Conta(long numeroConta,Cliente cliente) {
-		super();
 		this.numeroConta = numeroConta;
 		this.cliente = cliente;
 		
@@ -45,9 +44,6 @@ public class Conta {
 	}
 
 	// exibirSaldo
-	public void exibirSaldo() {
-		System.out.println("Cliente: " + this.cliente.getNome());
-		System.out.println("Saldo: " + this.saldo);
-	}
-
+	public abstract void exibirSaldo();
+	
 }

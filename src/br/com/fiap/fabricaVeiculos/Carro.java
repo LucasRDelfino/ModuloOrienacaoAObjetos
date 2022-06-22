@@ -9,15 +9,17 @@ public class Carro {
 	private int anoFabricacao;
 	private int anoModelo;
 	private String renavam;
-	private String motor;
-	private char cambio;
-	private int aro;
 	private double velocidade;
 	private String condutor;
-	boolean confirmacao;
+	private boolean confirmacao;
+	private Roda roda;
+	private Cambio cambio;
+	private Motor motor;
 
+	
+	
 	public Carro(String marca, String modelo, String cor, int anoFabricacao, int anoModelo, String renavam,
-			String motor, char cambio, int aro, String condutor) {
+			double velocidade, String condutor, Roda roda, Cambio cambio, Motor motor) {
 		super();
 		this.marca = marca;
 		this.modelo = modelo;
@@ -25,11 +27,11 @@ public class Carro {
 		this.anoFabricacao = anoFabricacao;
 		this.anoModelo = anoModelo;
 		this.renavam = renavam;
-		this.motor = motor;
-		this.cambio = cambio;
-		this.aro = aro;
+		this.velocidade = velocidade;
 		this.condutor = condutor;
-		this.confirmacao = false;
+		this.roda = roda;
+		this.cambio = cambio;
+		this.motor = motor;
 	}
 
 	public void ligar() {
@@ -82,9 +84,9 @@ public void acelerar(double aceleracao) {
 		System.out.println("Ano de Fabricação : " + this.anoFabricacao);
 		System.out.println("Ano modelo : " + this.anoModelo);
 		System.out.println("Renavam : " + this.renavam);
-		System.out.println("Motor : " + this.motor);
-		System.out.println("Cambio : " + this.cambio);
-		System.out.println("Aro : " + this.aro);
+		System.out.println("Motor : " + this.motor.getTipo());
+		System.out.println("Cambio : " + this.cambio.getTipo());
+		System.out.println("Aro da Roda : " + this.roda.getAro());
 		System.out.println("Velocidade : " + this.velocidade);
 		System.out.println("Condutor : " + this.condutor);
 
