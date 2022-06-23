@@ -1,4 +1,4 @@
-package br.com.fiap.fabricaVeiculos;
+package br.com.fiap.fabricaCarros;
 
 public class Motor {
 	private String tipo,marca;

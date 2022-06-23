@@ -29,18 +29,22 @@ public abstract class Conta {
 	}
 
 	// depositar
-	public void depositar(double valor) {
+	public boolean depositar(double valor) {
 		if (valor > 0) {
 			this.saldo += valor;
+			return true;
 		}
+		return false;
 	}
 
-	// transfeir
-	public void transferir(Conta conta, double valor) {
+	// transferir
+	public boolean transferir(Conta conta, double valor) {
 		boolean teste = this.sacar(valor);
 		if (teste == true) {
 			conta.depositar(valor);
+			return true;
 		}
+		return false; 
 	}
 
 	// exibirSaldo

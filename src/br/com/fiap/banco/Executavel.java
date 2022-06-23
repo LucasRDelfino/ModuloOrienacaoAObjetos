@@ -13,8 +13,18 @@ public class Executavel {
 		
 		ContaPoupanca conta2 = new ContaPoupanca(1,cliente2);
 		
-		conta1.Investir(conta2,500);
+		conta1.depositar(1000);
 		
+		conta1.Investir(1000,"LCA");
+		
+		conta1.exibirSaldo();
+		
+		conta1.Resgatar(1006);
+		
+		conta1.exibirSaldo();
+		
+		conta1.transferir(conta2, 100);
+		conta2.exibirSaldo();
 	}
 
 }

@@ -8,8 +8,12 @@ public class ContaPoupanca extends Conta{
 		
 	}
 	
+
 	@Override
 	public void exibirSaldo() {
+		System.out.println("Nome Cliente: " + this.cliente.getNome());
+		System.out.println("Saldo Poupança: " + this.saldo);
+		
 		
 	}
 
