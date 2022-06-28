@@ -5,15 +5,16 @@ public class carro extends Veiculo {
 
 
 
+
+
+
 public carro(String marca, String roda, String cambio, String motor, String modelo, String cor, String renavam,
-			String nomeMotorista, String placa, int anoFabricacao, int anoModelo, double velocidade, String aerofolio) {
+			String nomeMotorista, String placa, int anoFabricacao, int anoModelo, double velocidade, double tanque,
+			double capacidadeltrs, String aerofolio) {
 		super(marca, roda, cambio, motor, modelo, cor, renavam, nomeMotorista, placa, anoFabricacao, anoModelo,
-				velocidade);
+				velocidade, tanque, capacidadeltrs);
 		this.aerofolio = aerofolio;
 	}
-
-
-
 
 
 
@@ -35,6 +36,9 @@ public void exibirDados() {
 	System.out.println("Condutor : " + this.nomeMotorista);
 	System.out.println("Placa : " + this.placa);
 	System.out.println("Aerofolio : " + this.aerofolio);
+	System.out.println("Gasolina no Tanque : " + this.tanque);
+	System.out.println("Capacidade rodagems : " + this.capacidadeltrs + " km");
+	
 	
 	
 }

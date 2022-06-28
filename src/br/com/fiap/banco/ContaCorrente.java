@@ -11,22 +11,12 @@ public class ContaCorrente extends Conta{
 	}
 			
 	
-	public void Investir (double valor , String nomeInvestimento) {
+	public void Investir (double valor , Produto produto) {
 		boolean teste = this.sacar(valor);
 			if (teste == true) {
-				if(nomeInvestimento.equals("CDB")) {
-					saldoInvestimento += valor * (1+0.008);		
-				}else if (nomeInvestimento.equals("LCA")) {
-					saldoInvestimento += valor * (1+0.007);	
-				}else if (nomeInvestimento.equals("LCI")) {
-					saldoInvestimento += valor * (1+0.006);	
-				}else {
-					System.out.println("Esse investimento não existe nesse software");
-						
-				}
-			}
+				this.saldoInvestimento += produto.investir(valor);
 			
-
+			}
 	}
 		
 	public void Resgatar (double valor) {

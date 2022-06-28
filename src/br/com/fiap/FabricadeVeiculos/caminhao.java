@@ -4,15 +4,29 @@ public class caminhao extends Veiculo {
 	private String eixo,carroceria;
 	private int carga;
 
+
+
+
+	
+
+
+
+
 	public caminhao(String marca, String roda, String cambio, String motor, String modelo, String cor, String renavam,
-			String nomeMotorista, String placa, int anoFabricacao, int anoModelo, double velocidade,
-			String eixo, String carroceria, int carga) {
+			String nomeMotorista, String placa, int anoFabricacao, int anoModelo, double velocidade, double tanque,
+			double capacidadeltrs, String eixo, String carroceria, int carga) {
 		super(marca, roda, cambio, motor, modelo, cor, renavam, nomeMotorista, placa, anoFabricacao, anoModelo,
-				velocidade);
+				velocidade, tanque, capacidadeltrs);
 		this.eixo = eixo;
 		this.carroceria = carroceria;
 		this.carga = carga;
 	}
+
+
+
+
+
+
 
 
 

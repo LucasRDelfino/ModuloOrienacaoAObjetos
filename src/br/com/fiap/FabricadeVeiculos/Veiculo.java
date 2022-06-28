@@ -3,12 +3,17 @@ package br.com.fiap.FabricadeVeiculos;
 public abstract class Veiculo {
 	protected String marca,roda,cambio,motor,modelo,cor,renavam,nomeMotorista,placa;
 	protected int anoFabricacao,anoModelo;
-	protected double velocidade;
+	protected double velocidade,tanque,capacidadeltrs;
 	protected boolean confirmacao;
 	
 	
+
+
+
 	public Veiculo(String marca, String roda, String cambio, String motor, String modelo, String cor, String renavam,
-			String nomeMotorista, String placa, int anoFabricacao, int anoModelo, double velocidade) {
+			String nomeMotorista, String placa, int anoFabricacao, int anoModelo, double velocidade, double tanque,
+			double capacidadeltrs) {
+		super();
 		this.marca = marca;
 		this.roda = roda;
 		this.cambio = cambio;
@@ -21,7 +26,8 @@ public abstract class Veiculo {
 		this.anoFabricacao = anoFabricacao;
 		this.anoModelo = anoModelo;
 		this.velocidade = velocidade;
-		
+		this.tanque = tanque;
+		this.capacidadeltrs = capacidadeltrs;
 	}
 
 	public void ligar() {
@@ -66,7 +72,16 @@ public void acelerar(double aceleracao) {
 			System.out.println("O veiculo já está parado");
 		}
 
-}
+} 
+	
+	public void abastecer ( Combustivel combustivel, double litros) {
+		if (litros<50) {
+			this.tanque += litros; 
+			this.capacidadeltrs = combustivel.abastecer(litros);
+			
+			
+		}
+	}
 
 	
 	

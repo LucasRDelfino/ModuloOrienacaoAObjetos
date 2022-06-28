@@ -1,5 +1,9 @@
 package br.com.fiap.banco;
 
+import br.com.fiap.banco.Produto.CDB;
+import br.com.fiap.banco.Produto.LCA;
+import br.com.fiap.banco.Produto.LCI;
+
 public class Executavel {
 
 	public static void main(String[] args) {
@@ -8,6 +12,9 @@ public class Executavel {
 		Cliente cliente2 = new Cliente("Bruninho Delas" ,"Yervant, 100",7878787,"bruno.teya@gmail.com");
 		Cliente cliente3 = new Cliente("Julio Cesar" ,"Grajau, 1000", 56565656,"julio.cesar@gmail.com");
 		
+		CDB cdb = new CDB();
+		LCI lci = new LCI();
+		LCA lca = new LCA();
 	
 		ContaCorrente conta1 = new ContaCorrente(1,cliente1);
 		
@@ -15,7 +22,7 @@ public class Executavel {
 		
 		conta1.depositar(1000);
 		
-		conta1.Investir(1000,"LCA");
+		conta1.Investir(1000,lca);
 		
 		conta1.exibirSaldo();
 		

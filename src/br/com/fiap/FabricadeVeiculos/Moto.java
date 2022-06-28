@@ -4,15 +4,27 @@ public class Moto extends Veiculo {
 	private String freios,carenagem,pezinho;
 
 
+
+
+
+
+
+
 public Moto(String marca, String roda, String cambio, String motor, String modelo, String cor, String renavam,
-			String nomeMotorista, String placa, int anoFabricacao, int anoModelo, double velocidade,
-			String freios, String carenagem, String pezinho) {
+			String nomeMotorista, String placa, int anoFabricacao, int anoModelo, double velocidade, double tanque,
+			double capacidadeltrs, String freios, String carenagem, String pezinho) {
 		super(marca, roda, cambio, motor, modelo, cor, renavam, nomeMotorista, placa, anoFabricacao, anoModelo,
-				velocidade);
+				velocidade, tanque, capacidadeltrs);
 		this.freios = freios;
 		this.carenagem = carenagem;
 		this.pezinho = pezinho;
 	}
+
+
+
+
+
+
 
 
 @Override
