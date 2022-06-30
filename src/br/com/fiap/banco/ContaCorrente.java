@@ -11,20 +11,24 @@ public class ContaCorrente extends Conta{
 	}
 			
 	
-	public void Investir (double valor , Produto produto) {
-		boolean teste = this.sacar(valor);
+	public void Investir (double valor , Produto produto) throws SaldoInsuficiente {
+		boolean teste = false;
+			teste = this.sacar(valor);
 			if (teste == true) {
 				this.saldoInvestimento += produto.investir(valor);
 			
 			}
 	}
 		
-	public void Resgatar (double valor) {
+	public void Resgatar (double valor) throws SaldoInsuficiente{
 		boolean teste = this.depositar(valor);
 		if (teste == true) {
 			saldoInvestimento -= valor;
 			
 			}
+		else {
+			throw new SaldoInsuficiente("Saldo Insufciente");
+		}
 		}
 	
 	

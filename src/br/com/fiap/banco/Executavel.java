@@ -22,16 +22,26 @@ public class Executavel {
 		
 		conta1.depositar(1000);
 		
-		conta1.Investir(1000,lca);
+		try {
+			conta1.Investir(1000,lca);
+		} catch (SaldoInsuficiente e) {
+			e.printStackTrace();
+		}
 		
 		conta1.exibirSaldo();
 		
-		conta1.Resgatar(1006);
+		try {
+			conta1.Resgatar(100);
+		} catch (SaldoInsuficiente e) {
+			e.printStackTrace();
+		}
 		
 		conta1.exibirSaldo();
 		
 		conta1.transferir(conta2, 100);
 		conta2.exibirSaldo();
+		
+		Conta.exibirContador();
 	}
 
 }
